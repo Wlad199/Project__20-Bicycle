@@ -1,18 +1,24 @@
-//====================================================================================================
-// .wrapper {
-// }
-// .page {
-//       display: flex;
-//       justify-content: center;
-// 		.page__container
+html, body {
+	//height: 100%;
+}
 
-// 		&__container {    
-// 		}
-//       &__element {
-//          margin: 0 auto;
-//          height: 100vh; 
-//       }
-// }
+.wrapper {
+	//min-height: 100vh;
+}
 
+.page {
+}
+.main-screen {
+	//position: relative;
+		//margin: 0 auto;
+		//min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		&__bg {
+			img {
+				max-height: 100vh;
+			}
+		}
+	
+}
 
-//====================================================================================================

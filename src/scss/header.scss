@@ -91,6 +91,12 @@ body._lock {
 //  ====================================================================================================//
 
 .header {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
 
 	&__container {
 	}
@@ -101,7 +107,7 @@ body._lock {
 	}
 }
 .menu {
-	padding: 35px 0px 0px 0px;
+	padding: 15px 0px 0px 0px;
 	min-height: 85px;
 
 	&__body {
@@ -129,7 +135,7 @@ body._lock {
 }
 .menu-link {
 	font-weight: 700;
-	font-size: 13px;
+	font-size: 18px;
 	letter-spacing: 2.6px;
 	text-transform: uppercase;
 	@media (max-width: 767px) {
