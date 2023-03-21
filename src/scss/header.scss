@@ -121,6 +121,7 @@ body._lock {
 		}
 	}
 }
+
 .menu {
 	padding: 15px 0px 0px 0px;
 	min-height: 85px;
@@ -148,6 +149,12 @@ body._lock {
 	&__icon {
 	}
 }
+
+
+._header-scroll .menu {
+	padding: 0;
+}
+
 .menu-link {
 	font-weight: 700;
 	font-size: 18px;
@@ -160,6 +167,19 @@ body._lock {
 		font-size: 30px;
 	}
 	transition: all 0.3s ease 0s;
+	&:hover {
+		color: #5aab7a;
+	}
+}
+
+.header._header-scroll {
+	transition: all 0.8s ease 0s;
+	background-color:rgba(#0d0d11, 0.7);
+	min-height: 50px;
+}
+
+._header-scroll .menu-link {
+	color: #8dc5a4;
 	&:hover {
 		color: #5aab7a;
 	}

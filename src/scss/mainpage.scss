@@ -113,3 +113,134 @@
 		}
 	}
 }
+
+// boriosa ====================================================================================================//
+
+.boriosa {
+
+	&__body {
+		display: flex;
+		@media (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		flex: 0 1 33.333%;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+	}
+
+	&__text-block {
+		text-align: center;
+		@include adaptiveValue("padding-top", 60, 30);
+		@include adaptiveValue("padding-bottom", 60, 30);
+		@include adaptiveValue("padding-right", 60, 15, 1500, 767, 1);
+		@include adaptiveValue("padding-left", 60, 15, 1500, 767, 1);
+	}
+
+	&__bottom-ibg {
+		padding: 0px 0px 38% 0px;
+	}
+}
+.boriosa {
+
+	&__image {
+		position: relative;
+		flex: 0 1 66.667%;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+	}
+}
+
+// hulot ====================================================================================================//
+
+.hulot {
+
+	&__body {
+		display: flex;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__image {
+		position: relative;
+		flex: 0 1 33.333%;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+			&_1 {
+				order: 2;
+			}
+			&_2 {
+				order: 3;
+			}
+		}
+	}
+
+	&__content {
+		flex: 0 1 33.333%;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+	}
+
+	&__text-block {
+		text-align: center;
+		@include adaptiveValue("padding-top", 60, 30);
+		@include adaptiveValue("padding-bottom", 60, 30);
+		@include adaptiveValue("padding-left", 60, 15, 1500, 767, 1);
+		@include adaptiveValue("padding-right", 60, 15, 1500, 767, 1);
+	}
+
+	&__bottom-ibg {
+		padding: 0px 0px 38% 0px;
+	}
+}
+
+.item {
+
+	&__logo {
+	}
+
+	&__image-ibg {
+		height: 100%;
+	}
+}
+
+// comments ====================================================================================================//
+
+.comments {
+	@include adaptiveValue("padding-top", 124, 30);
+	@include adaptiveValue("padding-bottom", 150, 30);
+
+	&__container {
+	}
+
+	&__body {
+		text-align: center;
+	}
+
+	&__icon {
+		@include adaptiveValue("padding-bottom", 37, 20);
+	}
+
+	&__title {
+		font-weight: 300;
+		font-size: 18px;
+		letter-spacing: 1.8px;
+		span {
+			font-weight: 700;
+			color: #353738;
+		}
+		@include adaptiveValue("padding-bottom", 27, 20);
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 24, 16);
+		line-height: 141.666667%; /* 34/24 */
+		font-style: italic;
+	}
+}
