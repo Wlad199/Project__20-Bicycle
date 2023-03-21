@@ -1,1 +1,24 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+// block-text ====================================================================================================//
+
+.block-text {
+
+	&__image {
+		@include adaptiveValue("padding-bottom", 34, 20);
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 150%;
+		font-weight: 700;
+		letter-spacing: 3.6px;
+		color: #353738;
+		@include adaptiveValue("padding-bottom", 35, 20);
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 18, 14);
+		line-height: 150%
+	}
+}

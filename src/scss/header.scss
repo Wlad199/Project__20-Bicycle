@@ -92,7 +92,7 @@ body._lock {
 
 .header {
 	position: fixed;
-	height: 100%;
+	//height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -104,6 +104,21 @@ body._lock {
 	&__menu {
 		display: flex;
 		flex-direction: column;
+		@media (max-width: 767px) {
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row;
+			
+		}
+
+	}
+	&__logo {
+		position: relative;
+		z-index: 5;
+		display: none;
+		@media (max-width: 767px) {
+			display: inline;
+		}
 	}
 }
 .menu {
@@ -118,6 +133,7 @@ body._lock {
 		justify-content: space-between;
 		align-items: center;
 		@media (max-width: 767px) {
+			padding: 50px 0px 0px 0px;
 			display: block;
 			text-align: center;
 			li {
@@ -130,7 +146,6 @@ body._lock {
 	}
 
 	&__icon {
-		align-self: flex-end;
 	}
 }
 .menu-link {
