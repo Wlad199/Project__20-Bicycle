@@ -46,8 +46,8 @@
 
 .new-generation {
 	background-color: #f7f7f7;
-	@include adaptiveValue("padding-top", 117, 50);
-	@include adaptiveValue("padding-bottom", 142, 50);
+	@include adaptiveValue("padding-top", 117, 30);
+	@include adaptiveValue("padding-bottom", 142, 30);
 
 	&__text-block {
 		//margin: 0 auto;
@@ -63,18 +63,17 @@
 
 	&__body {
 		display: flex;
-		//height: 600px;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
 	}
 
-	&__image-ibg {
-		//height: 100%;
+	&__image {
 		position: relative;
 		flex: 0 1 66.667%;
-		&:hover {
-			.item__logo {
-				opacity: 1;
-				visibility: visible;
-			}
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+			display: block;
 		}
 	}
 
@@ -83,14 +82,16 @@
 		display: flex;
 		flex-direction: column;
 		flex: 0 1 33.333%;
-		//align-self: flex-end;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
 	}
 
 	&__text-block {
 		text-align: center;
 		@include adaptiveValue("padding-right", 70, 10, 2000, 1000, 1);
 		@include adaptiveValue("padding-left", 70, 10, 2000, 1000, 1);
-		@include adaptiveValue("padding-bottom", 80, 50);
+		@include adaptiveValue("padding-bottom", 80, 30);
 	}
 
 	&__bottom-ibg {
@@ -102,31 +103,13 @@
 	position: relative;
 
 	&__logo {
-		transition: all 0.3s ease 0s;
-		position: absolute;
-		z-index: 3;
-		width: 113px;
-		height: 118px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%);
-		background-color: rgba (100, 194, 158, 0.5);
-		opacity: 0;
-		visibility: hidden;
 	}
 
-	&__image {
-		&:hover {
-			&::after {
-				content: '';
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				background-color: rgba(90, 171, 122, 0.5);
-				z-index: 2;
-			}
+	&__image-ibg {
+		display: block;
+		height: 100%;
+		@media (max-width: 767px) {
+			padding: 50% 0px;
 		}
 	}
 }
