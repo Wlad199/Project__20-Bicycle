@@ -350,3 +350,80 @@
 		}
 	}
 }
+
+// saddle ====================================================================================================//
+
+.saddle {
+	@include adaptiveValue("padding-top", 110, 30);
+	@include adaptiveValue("padding-bottom", 110, 30);
+
+	&__container {
+	}
+
+	&__body {
+	}
+
+	&__image {
+		display: flex;
+		max-width: 95px;
+		margin: 0 auto;
+		@include adaptiveValue("padding-bottom", 40, 30);
+	}
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		@include adaptiveValue("font-size", 24, 18);
+		font-style: italic;
+		line-height: 141.666667%; /* 34/24 */
+		@include adaptiveValue("padding-bottom", 35, 30);
+
+	}
+
+	&__form {
+		display: flex;
+		margin: 0 auto;
+		justify-content: center;
+		position: relative;
+		max-width: 526px;
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+
+	&__input {
+		border: solid 1px #d3d7d9;
+		padding: 28px 0px 28px 28px;
+		width: 400px;
+		font-size: 20px;
+		font-style: italic;
+		color: #929292;
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+	}
+	&__button {
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 100%;
+		padding: 26px 45px;
+		color: #fff;
+		background-color: #64c29e;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			background-color: #42a882;
+		}
+	}
+}
+
+
+
+.form {
+	&__error {
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+		color: red;
+		font-size: 16px;
+	}
+}
