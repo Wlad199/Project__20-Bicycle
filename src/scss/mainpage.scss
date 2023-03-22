@@ -259,6 +259,7 @@
 
 .discover-top {
 	height: 800px;
+	@include adaptiveValue("height", 1333, 255, 4000, 767, 1);
 
 	&__column {
 		flex: 0 1 33.333%;
