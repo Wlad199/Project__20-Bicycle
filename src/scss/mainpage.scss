@@ -251,6 +251,9 @@
 
 	&__top {
 		display: flex;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__bottom {
@@ -258,16 +261,19 @@
 }
 
 .discover-top {
-	height: 800px;
-	@include adaptiveValue("height", 1333, 255, 4000, 767, 1);
-
+	@include adaptiveValue("height", 1333, 255, 4000, 767, 2);
+	width: 100%;
 	&__column {
 		flex: 0 1 33.333%;
+		@media (max-width: 767px) {
+			flex: 0 1 66.666%;
+		}
 
 		&_l {
 			flex: 0 1 16.666%;
-			//padding: 58% 0px 0px 0px;
-			//padding: 300px 0px;
+			@media (max-width: 767px) {
+				flex: 0 1 33.333%;
+			}
 		}
 	}
 
@@ -317,5 +323,30 @@
 .discover-top-alone {
 
 	&__image {
+	}
+}
+
+.discover-bottom {
+	@include adaptiveValue("padding-top", 94, 30);
+	@include adaptiveValue("padding-bottom", 94, 30);
+	background-color: #282f35;
+	display: flex;
+	justify-content: center;
+
+	&__button {
+		line-height: 150%;
+		text-align: center;
+		width: 300px;
+		@include adaptiveValue("width", 300, 250, 767, 320, 1);
+		font-size: 14px;
+		font-weight: 700;
+		letter-spacing: 2.8px;
+		color: #fff;
+		padding: 20px 0px;
+		border: solid 1px rgba(255, 255, 255, 0.5);
+		transition: all 0.3s ease 0s;
+		&:hover {
+			background-color: #1a1e22;
+		}
 	}
 }
