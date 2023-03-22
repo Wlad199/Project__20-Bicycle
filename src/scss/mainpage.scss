@@ -244,3 +244,77 @@
 		font-style: italic;
 	}
 }
+
+// discover ====================================================================================================//
+
+.discover {
+
+	&__top {
+		display: flex;
+	}
+
+	&__bottom {
+	}
+}
+
+.discover-top {
+	height: 800px;
+
+	&__column {
+		flex: 0 1 33.333%;
+
+		&_l {
+			flex: 0 1 16.666%;
+			//padding: 58% 0px 0px 0px;
+			//padding: 300px 0px;
+		}
+	}
+
+	&__twice {
+		display: flex;
+	}
+
+	&__alone {
+	}
+
+	&__image {
+		position: relative;
+		
+	}
+}
+
+.discover-top-twice {
+	height: 50%;
+
+	&__column {
+		flex: 0 1 50%;
+	}
+
+	&__image {
+		position: relative;
+	}
+}
+
+.discover-top-alone {
+	position: relative;
+	height: 50%;
+
+	&__image {
+	}
+}
+
+.item {
+
+	&__logo {
+	}
+
+	&__image-ibg {
+	}
+}
+.logo-decore {
+}
+.discover-top-alone {
+
+	&__image {
+	}
+}
